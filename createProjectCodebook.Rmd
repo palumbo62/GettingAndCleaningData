@@ -1,0 +1,57 @@
+Human-Activity-Recognition-Using-Smartphones Project Codebook
+=============================================================
+
+This codebook was created on `r as.character(Sys.time())`.  It is auto-generated at the 
+end of each execution run of the run_analysis.R script.
+
+
+Tidy Dataset Variable Names
+---------------------------
+
+Variable Name    | Description
+-----------------|------------
+SubjectID        | Numeric identifier of each test subject responsible for performing each observation sample. 
+ActivityID       | Descriptive name of each performed/sampled activity. 
+MeasurementID    | Identifier for each sample measurement that was recorded for each subject and activity performed.
+MeanValue        | Calculated 'mean' value for each specific observation set per subject/activity/measurement.
+
+Tidy Data Attributes
+--------------------
+
+Structure:
+
+```{r}
+str(tidyData)
+```
+
+Class:
+
+```{r}
+class(tidyData)
+```
+
+Head/Tail
+------------------------------
+
+```{r}
+head(tidyData)
+tail(tidyData)
+```
+
+Summary
+--------------------
+
+```{r}
+summary(tidyData)
+```
+
+Export Data
+-----------
+Data is exported to text file ""HumanActivityRecognitionUsingSmartphonesTidyDataset.txt" located in the current working directory of the script.
+
+
+```{r save}
+exportFname <- "HumanActivityRecognitionUsingSmartphonesTidyDataset.txt"
+f <- file.path(dataFilePath, exportFname)
+write.table(tidyData, f, quote=FALSE, row.names=FALSE)
+```
