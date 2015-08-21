@@ -90,18 +90,15 @@
 setupEnv <- function() {
   message("Setting up environment")
   
-  packages <- c("data.table", "dplyr", "reshape2")
+  packages <- c("data.table", "dplyr", "knitr", "reshape2")
   sapply(packages, require, character.only=TRUE, 
          warn.conflicts = TRUE, quietly=TRUE)
 
- # if (!require(c("data.table", "dplyr"))) {
-#    stop("Required packages: data.table dplyr")
-#  }
-  
   localDataPath = getwd()
-  dataFile <<- "Dataset.zip"
-  dataFilePath <<- file.path(localDataPath, dataFile)
-  print(dataFilePath)
+  dataFilename <<- "Dataset.zip"
+  dataFilePath <<- localDataPath
+  dataFile <<- file.path(dataFilePath, dataFilename)
+  print(dataFile)
   dataUrl <<- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 }
 
@@ -136,12 +133,12 @@ importDataSet <- function(dsPath, dFname, colName) {
   read.table(file.path(dsPath, dFname), col.names = colName)
 }
   
-###
-# Start actual processing here
-###
+############################################################
+#            Start actual processing here                  #
+############################################################
 
 setupEnv()
-downloadDataSet(dataUrl, dataFilePath)
+downloadDataSet(dataUrl, dataFile)
 
 ## Import the required datasets
 message("Importing datasets")
@@ -255,10 +252,6 @@ tidyData <-aggregate(allSubjects$value, by=list(allSubjects$FeatureName,
 colnames(tidyData) <- c("MeasurementID", "ActivityID",
                         "SubjectID", "MeanValue")
 tidyData <- select(tidyData, SubjectID, ActivityID, MeasurementID, MeanValue)
-
-# Display the data to the console as well
-head(tidyData, n=10L)
-tail(tidyData, n=10L)
 
 # Auto-generate the codebook and html markdown for convenience
 message("Generating project codebook")

@@ -1,7 +1,7 @@
 Human-Activity-Recognition-Using-Smartphones Project Codebook
 =============================================================
 
-This codebook was created on 2015-08-21 17:25:43.  It is auto-generated at the 
+This codebook was created on 2015-08-21 17:52:51.  It is auto-generated at the 
 end of each execution run of the run_analysis.R script.
 
 
@@ -15,11 +15,9 @@ ActivityID       | Descriptive name of each performed/sampled activity.
 MeasurementID    | Identifier for each sample measurement that was recorded for each subject and activity performed.
 MeanValue        | Calculated 'mean' value for each specific observation set per subject/activity/measurement.
 
-Tidy Data Attributes
---------------------
 
-Structure:
-
+Tidy Dataset Structure
+----------------------
 
 ```r
 str(tidyData)
@@ -33,8 +31,8 @@ str(tidyData)
 ##  $ MeanValue    : num  -0.939 -0.867 -0.883 -0.924 -0.834 ...
 ```
 
-Class:
-
+TidyData Class:
+---------------
 
 ```r
 class(tidyData)
@@ -44,9 +42,8 @@ class(tidyData)
 ## [1] "data.frame"
 ```
 
-Head/Tail
-------------------------------
-
+Tidy Dataset Head/Tail
+----------------------
 
 ```r
 head(tidyData)
@@ -76,9 +73,8 @@ tail(tidyData)
 ## 11880        30 WALKING_UPSTAIRS  tGravityAccMag-std() -0.32741082
 ```
 
-Summary
+Tidy Dataset Summary
 --------------------
-
 
 ```r
 summary(tidyData)
@@ -113,16 +109,4 @@ Data is exported to text file ""HumanActivityRecognitionUsingSmartphonesTidyData
 exportFname <- "HumanActivityRecognitionUsingSmartphonesTidyDataset.txt"
 f <- file.path(dataFilePath, exportFname)
 write.table(tidyData, f, quote=FALSE, row.names=FALSE)
-```
-
-```
-## Warning in file(file, ifelse(append, "a", "w")): cannot open file
-## 'C:/Users/palumbo/OnlineCourses/Coursera/DataScientist/Course3-
-## GettingAndCleaningData/CourseProject/GIT/GettingAndCleaningData/
-## Dataset.zip/HumanActivityRecognitionUsingSmartphonesTidyDataset.txt': No
-## such file or directory
-```
-
-```
-## Error in file(file, ifelse(append, "a", "w")): cannot open the connection
 ```

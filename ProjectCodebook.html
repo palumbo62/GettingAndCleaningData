@@ -203,7 +203,7 @@ hr {
 <body>
 <h1>Human-Activity-Recognition-Using-Smartphones Project Codebook</h1>
 
-<p>This codebook was created on 2015-08-21 17:25:43.  It is auto-generated at the 
+<p>This codebook was created on 2015-08-21 17:52:51.  It is auto-generated at the 
 end of each execution run of the run_analysis.R script.</p>
 
 <h2>Tidy Dataset Variable Names</h2>
@@ -232,9 +232,7 @@ end of each execution run of the run_analysis.R script.</p>
 </tr>
 </tbody></table>
 
-<h2>Tidy Data Attributes</h2>
-
-<p>Structure:</p>
+<h2>Tidy Dataset Structure</h2>
 
 <pre><code class="r">str(tidyData)
 </code></pre>
@@ -246,7 +244,7 @@ end of each execution run of the run_analysis.R script.</p>
 ##  $ MeanValue    : num  -0.939 -0.867 -0.883 -0.924 -0.834 ...
 </code></pre>
 
-<p>Class:</p>
+<h2>TidyData Class:</h2>
 
 <pre><code class="r">class(tidyData)
 </code></pre>
@@ -254,7 +252,7 @@ end of each execution run of the run_analysis.R script.</p>
 <pre><code>## [1] &quot;data.frame&quot;
 </code></pre>
 
-<h2>Head/Tail</h2>
+<h2>Tidy Dataset Head/Tail</h2>
 
 <pre><code class="r">head(tidyData)
 </code></pre>
@@ -280,7 +278,7 @@ end of each execution run of the run_analysis.R script.</p>
 ## 11880        30 WALKING_UPSTAIRS  tGravityAccMag-std() -0.32741082
 </code></pre>
 
-<h2>Summary</h2>
+<h2>Tidy Dataset Summary</h2>
 
 <pre><code class="r">summary(tidyData)
 </code></pre>
@@ -310,16 +308,6 @@ end of each execution run of the run_analysis.R script.</p>
 <pre><code class="r">exportFname &lt;- &quot;HumanActivityRecognitionUsingSmartphonesTidyDataset.txt&quot;
 f &lt;- file.path(dataFilePath, exportFname)
 write.table(tidyData, f, quote=FALSE, row.names=FALSE)
-</code></pre>
-
-<pre><code>## Warning in file(file, ifelse(append, &quot;a&quot;, &quot;w&quot;)): cannot open file
-## &#39;C:/Users/palumbo/OnlineCourses/Coursera/DataScientist/Course3-
-## GettingAndCleaningData/CourseProject/GIT/GettingAndCleaningData/
-## Dataset.zip/HumanActivityRecognitionUsingSmartphonesTidyDataset.txt&#39;: No
-## such file or directory
-</code></pre>
-
-<pre><code>## Error in file(file, ifelse(append, &quot;a&quot;, &quot;w&quot;)): cannot open the connection
 </code></pre>
 
 </body>

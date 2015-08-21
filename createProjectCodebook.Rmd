@@ -15,32 +15,28 @@ ActivityID       | Descriptive name of each performed/sampled activity.
 MeasurementID    | Identifier for each sample measurement that was recorded for each subject and activity performed.
 MeanValue        | Calculated 'mean' value for each specific observation set per subject/activity/measurement.
 
-Tidy Data Attributes
---------------------
 
-Structure:
-
+Tidy Dataset Structure
+----------------------
 ```{r}
 str(tidyData)
 ```
 
-Class:
-
+TidyData Class:
+---------------
 ```{r}
 class(tidyData)
 ```
 
-Head/Tail
-------------------------------
-
+Tidy Dataset Head/Tail
+----------------------
 ```{r}
 head(tidyData)
 tail(tidyData)
 ```
 
-Summary
+Tidy Dataset Summary
 --------------------
-
 ```{r}
 summary(tidyData)
 ```
