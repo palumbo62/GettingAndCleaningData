@@ -5,7 +5,6 @@ Getting and Cleaning Data (getdata-031)
 Course Project - README.md
 Author: Robert Palumbo
 GitHub: https://github.com/palumbo62/GettingAndCleaningData/
-===========================
 
 
 Project Requirements
@@ -53,6 +52,3 @@ The final 'tidy' dataset will be written to the current working directory.  The 
   "HumanActivityRecognitionUsingSmartphonesTidyDataset.txt"
   
 This is just a simple text file written with 'write.table()' as required.
-
-
-3. Script wil
