@@ -3,8 +3,8 @@
 Coursera DataScientist Track
 Getting and Cleaning Data (getdata-031)
 Course Project - README.md
-Author: Robert Palumbo
-GitHub: https://github.com/palumbo62/GettingAndCleaningData/
+Author - Robert Palumbo 
+GitHub - https://github.com/palumbo62/GettingAndCleaningData/
 
 
 ## Project Requirements
