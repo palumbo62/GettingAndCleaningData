@@ -137,6 +137,8 @@ importDataSet <- function(dsPath, dFname, colName) {
 #            Start actual processing here                  #
 ############################################################
 
+startTime <- Sys.time()
+
 setupEnv()
 downloadDataSet(dataUrl, dataFile)
 
@@ -262,6 +264,11 @@ markdownToHTML("ProjectCodebook.md", "ProjectCodebook.html")
 
 # Script is complete!
 message("Done Processing!!")
+
+endTime <- Sys.time()
+runTime <- endTime - startTime
+
+message("StartTime: ", startTime, "\nEndTime: ", endTime, "\nRunTime: ", runTime)
 
 
   
