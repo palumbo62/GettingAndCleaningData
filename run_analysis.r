@@ -6,7 +6,7 @@
 ##  Script: run_analysis.r
 ##    Execute within RStudio.  Requires internet access to download dataset
 ##
-##  August 20, 2015
+##  August 2015
 ##
 ##  Project Requirements:
 ##
@@ -52,37 +52,14 @@
 ##   NOTES:
 ##      1. You MUST load the following library packages BEFORE running
 ##         this script
-##            data.table  dplyr reshape2
+##            data.table  dplyr knitr reshape2  markdown
 ##      2. Final tidy data ouput is written to the following file
 ##         in the current working directory:
 ##
 ##            "HumanActivityRecognitionUsingSmartphonesTidyDataset.txt"
 ##
-##   Project Execution Steps
-##
-##      1. Download the R script 'run_analysis.R'.
-##      2. Start the RStudio IDE.
-##      3. Load the dplyr, data.table, reshape2 packages (install if needed).
-##      4. Ensure you have an internet connection as the script will 
-##         automatically download the initial dataset.
-##      5. Source the script into R studio and run as required.
-##      6. On first run, if the dataset does not exist in the current working
-##         directory it will be automatically downloaded. Subsequent runs will
-##         use the existing dataset. If you delete it, a new download will take 
-##         place.
-##      7. The script will clean the data according to the project requirements.
-##      8. Ouput messages are displayed on the console to provide insight into
-##         the cleaning process.
-##      9. Script has completed when you see the message 'DONE PROCESSING'
-##         displayed on the console.
-##
-##    Script Output
-##
-##      The final 'tidy' dataset will be written to the current working directory. The name of the output file is:
-##
-##          "HumanActivityRecognitionUsingSmartphonesTidyDataset.txt"
-##
-##      This is just a simple text file written with 'write.table()' as required.
+##  Please refer to the associated README.md file for execution and output
+##  details.
 ##
 ##############################################################################
 
@@ -92,7 +69,7 @@ setupEnv <- function() {
   
   packages <- c("data.table", "dplyr", "knitr", "reshape2", "markdown")
   sapply(packages, require, character.only=TRUE, 
-         warn.conflicts = TRUE, quietly=TRUE)
+         warn.conflicts = FALSE, quietly=TRUE)
 
   localDataPath = getwd()
   dataFilename <<- "Dataset.zip"
