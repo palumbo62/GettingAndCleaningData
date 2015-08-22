@@ -40,6 +40,7 @@ Project Execution Steps
 4. Ensure you have an internet connection as the script will automatically download the initial dataset.
 4. Source the script into R studio and run as required.
 5. On first run, if the dataset does not exist in the current working directory it will be automatically downloaded. Subsequent runs will use the existing dataset. If you delete it, a new download will take place.
+6. Dataset is automatically extracted from the archive file. The root directory of the data files is 'UCI HAR Dataset' located in the current working directory.
 6. The script will clean the data according to the project requirements.
 7. Ouput messages are displayed on the console to provide insight into the cleaning process.
 8. Script has completed processing when you see the message 'DONE PROCESSING' displayed.
