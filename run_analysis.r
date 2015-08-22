@@ -90,7 +90,7 @@
 setupEnv <- function() {
   message("Setting up environment")
   
-  packages <- c("data.table", "dplyr", "knitr", "reshape2")
+  packages <- c("data.table", "dplyr", "knitr", "reshape2", "markdown")
   sapply(packages, require, character.only=TRUE, 
          warn.conflicts = TRUE, quietly=TRUE)
 

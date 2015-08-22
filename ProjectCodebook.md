@@ -1,7 +1,7 @@
 Human-Activity-Recognition-Using-Smartphones Project Codebook
 =============================================================
 
-This codebook was created on 2015-08-21 17:52:51.  It is auto-generated at the 
+This codebook was created on 2015-08-21 18:45:40.  It is auto-generated at the 
 end of each execution run of the run_analysis.R script.
 
 
